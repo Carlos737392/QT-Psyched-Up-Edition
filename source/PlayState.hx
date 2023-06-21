@@ -589,10 +589,13 @@ class PlayState extends MusicBeatState
 				discordDifficultyOverride = "Future";
 
 				hazardBG = new BGSprite('hazard/qt-port/stage/streetBackCute', -750, -145, 0.95, 0.95);
+				hazardBG.scale.set(2, 2);
+				hazardBG.updateHitbox();
 				add(hazardBG);
 
 				var streetFront:BGSprite = new BGSprite('hazard/qt-port/stage/streetFrontCute', -820, 710, 0.95, 0.95);
 				streetFront.setGraphicSize(Std.int(streetFront.width * 1.15));
+				streetFront.scale.set(2, 2);
 				streetFront.updateHitbox();
 				add(streetFront);
 
@@ -614,6 +617,7 @@ class PlayState extends MusicBeatState
 				qt_tv01.animation.addByPrefix('eyeLeft', 'TV_eyeLeft', 24, false);
 				qt_tv01.setPosition(-62, 540);
 				qt_tv01.setGraphicSize(Std.int(qt_tv01.width * 1.2));
+				qt_tv01.scale.set(2, 2);
 				qt_tv01.updateHitbox();
 				qt_tv01.antialiasing = ClientPrefs.globalAntialiasing;
 				qt_tv01.scrollFactor.set(0.9, 0.9);
